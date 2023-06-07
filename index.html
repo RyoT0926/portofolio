@@ -1,585 +1,231 @@
-body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
-  font-size: 15px;
-  letter-spacing: .05em;
-  color: #333;
-}
-
-a {
-  transition: opacity .3s;
-  text-decoration: none;
-  color: #1ca9e3;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-  border-style: none;
-}
-
-
-
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
-
-/*--------------------------------
- レイアウト
----------------------------------*/
-.wrapper {
-  padding-top: 73px;
-}
-
-
-.section {
-  padding: 90px 0;
-}
-
-.section:nth-of-type(odd) {
-  background-color: #def7fa;
-}
-
-.container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-/*--------------------------------
- 見出し
----------------------------------*/
-.title {
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 40px;
-  text-align: center;
-  letter-spacing: .05em;
-  color: #333;
-  opacity: 0;
-  transition: 2s;
-}
-.title.active {
-  opacity: 1;
-}
-
-
-.lead {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-/*--------------------------------
-ヘッダー
----------------------------------*/
-.header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #25b7c0;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-}
-
-.header-logo {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-right: 20px;
-  letter-spacing: .05em;
-}
-
-.header-logo a {
-  color: #333;
-}
-
-.gnav-list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.gnav-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.gnav-item a {
-  position: relative;
-  font-size: 13px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-  color: #333;
-}
-.gnav-item a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #333;
-}
-
-.gnav-item a:hover:after {
-  width: 100%;
-}
-
-/*--------------------------------
- メインビジュアル
----------------------------------*/
-.mv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  text-align: center;
-}
-
-.mv-container {
-  padding: 0 40px;
-  opacity: 0;
-  transition: 4s linear all;
-}
-.mv-container.active{
-  opacity: 1;
-  transform: scale(1.3);
-}
-
-.mv-title {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 5px;
-  letter-spacing: .1em;
-}
-.mv-subtitle {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 40px;
-  letter-spacing: .08em;
-}
-
-.mv-text {
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-/*--------------------------------
- Works
----------------------------------*/
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-}
-
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
-  opacity: 0;
-  transition: .5s;
-}
-.works-item.active {
-  opacity: 1;
-}
-.works-item:hover {
-  opacity: .9;
-}
-
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.works-img {
-  overflow: hidden;
-}
-.works-img img {
-  border: 1px solid #e6e6e6;
-  transition: .5s;
-}
-.works-img img:hover {
-  transform: scale(1.25);
-}
-
-.works-name {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.works-info {
-  font-size: 10px;
-  margin-top: 5px;
-}
-
-
-/*--------------------------------
- Skill
----------------------------------*/
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: -50px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
-}
-
-.skill-img {
-  width: 60px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.skill-body {
-  flex: 1;
-}
-
-.skill-name {
-  margin-bottom: 10px;
-}
-
-.skill-text {
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-/*--------------------------------
- About
----------------------------------*/
-.profile {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.profile-img {
-  width: 20%;
-  margin-right: 30px;
-  border-radius: 50%;
-}
-.profile-img img {
-  border-radius: 50%;
-}
-.profile-body {
-  flex: 1;
-}
-
-.profile-body p {
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.profile-body p:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-/*--------------------------------
- Contact
----------------------------------*/
-.contact {
-  text-align: center;
-}
-
-.contact-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.contact-text {
-  margin-top: 10px;
-}
-.sns-title {
- border-bottom: #1ca9e3;
-}
-.contact-list {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  gap: 15px;
-}
-
-/*--------------------------------
- ページトップ
----------------------------------*/
-.page-top {
-  font-weight: bold;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
-  background-color: #4c4c4c;
-}
-
-.page-top .material-icons-outlined {
-  vertical-align: bottom;
-  color: #fff;
-}
-
-/*--------------------------------
- フッター
----------------------------------*/
-.footer {
-  padding: 30px;
-  background-color: #333;
-}
-
-.copyright {
-  font-size: 10px;
-  text-align: center;
-  color: #797979;
-}
-
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-.article {
-  padding: 80px 0;
-}
-
-.article-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.article-title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.article-body {
-  max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.article-body h3 {
-  position: relative;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding-left: 1em;
-}
-
-.article-body h3:not(:first-child) {
-  margin-top: 50px;
-}
-
-.article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
-  background-color: #333;
-}
-
-.article-body p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.home-link {
-  text-align: center;
-}
-
-/*media Queries 767
-----------------------------------------------------*/
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
-  /* 見出し */
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  /* ヘッダー */
-  .header .container {
-    padding: 15px;
-  }
-
-  .header-logo {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 10px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /*  メインビジュアル */
-  .mv {
-    height: 75vh;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
-
-  .mv-title {
-    font-size: 30px;
-  }
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mv-text {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  /* Works */
-  .works-name {
-    font-size: 12px;
-  }
-
-  .works-info {
-    margin-top: 3px;
-  }
-
-  .works-list {
-    justify-content: space-between;
-  }
-
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  /* Skill */
-  .skill-list {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .skill-item {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-
-  .skill-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .skill-name {
-    margin-bottom: 5px;
-  }
-
-  .skill-text {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  /* About */
-  .profile {
-    display: block;
-  }
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
-
-  .profile-body p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .profile-body p:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  /* フッター */
-  .footer {
-    padding: 20px;
-  }
-
-  /* 下層ページ */
-  .article {
-    padding: 50px 0;
-  }
-
-  .article-body h3 {
-    font-size: 16px;
-    padding-left: .8em;
-  }
-
-  .article-body h3:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .article-body p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ryo Takamiya ポートフォリオ" />
+    <meta property="og:url" content="http://ryotakamiya-portofolio.site/" />
+    <meta
+      property="og:description"
+      content="Ryo Takamiyaのポートフォリオサイトです。"
+    />
+    <meta property="og:image" content="img/ogp.png" />
+    <meta name="description" content="Ryo Takamiyaのポートフォリオサイトです" />
+    <title>RYO TAKAMIYA ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="”canonical”" href="”URLが入る”" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="header-logo">
+            <a href=".">RYO TAKAMIYA</a>
+          </h1>
+          <nav class="gnav">
+            <ul class="gnav-list">
+              <li class="gnav-item"><a href="#works">WORKS</a></li>
+              <!-- <li class="gnav-item"><a href="#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="#about">ABOUT</a></li> -->
+              <li class="gnav-item"><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- /header -->
+
+      <main class="content">
+        <!-- mv -->
+        <div class="mv">
+          <div class="mv-container">
+            <p class="mv-title">RYO TAKAMIYA</p>
+            <p class="mv-subtitle">PORTFOLIO</p>
+            <!-- <p class="mv-text">
+            ユーザーとお客様が心から満足できる<br class="sp-only">サイトをお作りいたします。<br>
+            デザインとコーディングは<br class="sp-only">おまかせください。<br>
+           </p> -->
+          </div>
+        </div>
+        <!-- /mv -->
+
+        <!-- skill -->
+        <!-- <section class="skill section" id="skill">
+        <div class="container">
+          <h2 class="title">SKILL</h2>
+          <div class="skill-list">
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">HTML5/CSS3</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">WordPress</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">JavaScript</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Photoshop</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Illustrator</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <div class="skill-body">
+                <h3 class="skill-name">XD</h3>
+                <p class="skill-text">
+                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+        <!-- /skill -->
+
+        <!-- about -->
+        <!-- <section class="about section" id="about">
+        <div class="container">
+          <h2 class="title">ABOUT</h2>
+          <div class="profile">
+            <p class="profile-img">
+              <img src="img/profile.jpg" alt="">
+            </p>
+            <div class="profile-body">
+              <p>
+                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+              </p>
+              <p>
+                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+        <!-- /about -->
+        <!-- works -->
+        <section class="works section" id="works">
+          <div class="container">
+            <h2 class="title">WORKS</h2>
+            <div class="works-list">
+              <a class="works-item" href="demo-cafe/index.html" target="_blank">
+                <div class="works-img">
+                  <img src="img/demo-cafe.jpeg" alt="cafe-webpage" />
+                </div>
+                <p class="works-name">カフェのwebページ</p>
+                <p class="works-info">Coding(Responsive)</p>
+              </a>
+
+              <a
+                class="works-item"
+                href="scroll-site/index.html"
+                target="_blank"
+              >
+                <div class="works-img">
+                  <img src="img/scroll-website.jpeg" alt="scroll-website" />
+                </div>
+                <p class="works-name">
+                  スクロールする事で画像などが表示されるサイト
+                </p>
+                <p class="works-info">Coding / js使用</p>
+              </a>
+
+              <a class="works-item" href="https://ryot0926.github.io/gradation/" target="_blank">
+                <div class="works-img">
+                  <img src="img/gradation.jpeg" alt="gradation-design" />
+                </div>
+                <p class="works-name">動的グラデーションデザイン</p>
+                <p class="works-info">Design/coding/cssでデザイン</p>
+              </a>
+
+              <a class="works-item" href="works-template.html" target="_blank">
+                <div class="works-img">
+                  <img src="img/sky-coffee.jpeg" alt="skycoffeeのWebサイト" />
+                </div>
+                <p class="works-name">Sky Coffee</p>
+                <p class="works-info">coding</p>
+                <a href="https://webdesigner-go.com/coding-practice/" class="works-info">
+                   無料コーディング練習所
+                </>
+              </a>
+<!-- 
+              <a class="works-item" href="works-template.html" target="b">
+                <div class="works-img">
+                  <img src="img/works-dummy-thumb.jpg" alt="" />
+                </div>
+                <p class="works-name">作品名が入る</p>
+                <p class="works-info">Banner Design</p>
+              </a> -->
+          
+            </div>
+          </div>
+        </section>
+        <!-- /works -->
+
+        <!-- contact -->
+        <section class="contact section" id="contact">
+        <div class="container">
+          <h2 class="title active">CONTACT</h2>
+          <p class="lead">
+            お問い合わせは、<br class="sp-only">Twitterでお伺いしております。
+          </p>
+          <div class="contact-list">
+            <h3 class="sns-title>">Twitter</h3>
+            <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/takamiya_code_?ref_src=twsrc%5Etfw">Tweets by takamiya_code_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </section>
+        <!-- /contact -->
+
+        <div class="page-top" id="js-page-top">
+          <span class="material-icons-outlined">expand_less</span>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="copyright">&copy;RYO TAKAMIYA</div>
+      </footer>
+      <!-- /footer -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
