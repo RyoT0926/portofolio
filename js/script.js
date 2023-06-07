@@ -19,7 +19,7 @@ $(function () {
 
 });
 
-let mainItem = document.querySelector("main");
+let mainItem = document.querySelector(".mv-container");
 let title = document.querySelector(".title");
 let worksItem = [...document.querySelectorAll(".works-item")];
 console.log(worksItem)
