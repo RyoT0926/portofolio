@@ -22,6 +22,7 @@ $(function () {
 let mainItem = document.querySelector(".mv-container");
 let title = document.querySelector(".title");
 let worksItem = [...document.querySelectorAll(".works-item")];
+let slide = document.querySelector(".slide")
 console.log(worksItem)
 
 let setItemActive  = (entries) => {
@@ -48,3 +49,4 @@ while (i < worksItem.length) {
   observer.observe(worksItem[i]);
   i++;
 };
+observer.observe(slide)
