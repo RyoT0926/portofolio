@@ -8,11 +8,12 @@
     <meta property="og:url" content="http://ryotakamiya-portofolio.site/" />
     <meta
       property="og:description"
-      content="Ryo Takamiyaのポートフォリオサイトです。"
+      content="Ryo Takamiyaのポートフォリオサイト"
     />
     <meta property="og:image" content="img/ogp.png" />
     <meta name="description" content="Ryo Takamiyaのポートフォリオサイトです" />
     <title>RYO TAKAMIYA ポートフォリオ</title>
+    <!-- フォント -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
@@ -22,10 +23,17 @@
       href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
     <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <link rel="”canonical”" href="”URLが入る”" />
+    <link rel="shortcut icon" href="img/ryofavicon.jpeg" />
+    <link rel="”canonical”" href="”mainURLが入る”" />
   </head>
 
   <body>
@@ -34,7 +42,7 @@
       <header class="header">
         <div class="container">
           <h1 class="header-logo">
-            <a href=".">RYO TAKAMIYA</a>
+            <a href="#">RYO TAKAMIYA</a>
           </h1>
           <nav class="gnav">
             <ul class="gnav-list">
@@ -51,9 +59,31 @@
       <main class="content">
         <!-- mv -->
         <div class="mv">
-          <div class="mv-container">
-            <p class="mv-title">RYO TAKAMIYA</p>
-            <p class="mv-subtitle">PORTFOLIO</p>
+          
+          <div class="bird"></div>
+          <div class="bird -type_2"></div>
+          <div class="bird -type_3"></div>
+        
+          
+          <div class="mv-container containerBOUND">
+            <!-- <div class="wave">
+              <span class="mv-title rock-3d-regular">り</span>
+              <span class="mv-title rock-3d-regular">ょ</span>
+              <span class="mv-title rock-3d-regular">う</span>
+              <span class="mv-title rock-3d-regular">E</span>
+            </div> -->
+            <!-- <p class="mv-title rock-3d-regular">りょう たかみや</p> -->
+            <p class="mv-title bound rock-3d-regular">
+              <span>り</span>
+              <span>ょ</span>
+              <span>う</span>
+              <span>た</span>
+              <span>か</span>
+              <span>み</span>
+              <span>や</span>
+            </p>
+            <p class="mv-subtitle rock-3d-regular slide">PORTFOLIO</p>
+
             <!-- <p class="mv-text">
             ユーザーとお客様が心から満足できる<br class="sp-only">サイトをお作りいたします。<br>
             デザインとコーディングは<br class="sp-only">おまかせください。<br>
@@ -153,7 +183,7 @@
                 <p class="works-info">Coding(Responsive)</p>
               </a>
 
-              <a
+              <!-- <a
                 class="works-item"
                 href="scroll-site/index.html"
                 target="_blank"
@@ -167,25 +197,30 @@
                 <p class="works-info">Coding / js使用</p>
               </a>
 
-              <a class="works-item" href="https://ryot0926.github.io/gradation/" target="_blank">
+              <a
+                class="works-item"
+                href="https://ryot0926.github.io/gradation/"
+                target="_blank"
+              >
                 <div class="works-img">
                   <img src="img/gradation.jpeg" alt="gradation-design" />
                 </div>
                 <p class="works-name">動的グラデーションデザイン</p>
                 <p class="works-info">Design/coding/cssでデザイン</p>
-              </a>
+              </a> -->
 
-              <a class="works-item" href="https://ryot0926.github.io/sky-coffee/" target="_blank">
+              <a
+                class="works-item"
+                href="https://ryot0926.github.io/sky-coffee/"
+                target="_blank"
+              >
                 <div class="works-img">
                   <img src="img/sky-coffee.jpeg" alt="skycoffeeのWebサイト" />
                 </div>
                 <p class="works-name">Sky Coffee</p>
                 <p class="works-info">coding</p>
-                <a href="https://webdesigner-go.com/coding-practice/" class="works-info" target="_blank">
-                   無料コーディング練習所
-                </a>
               </a>
-<!-- 
+              <!-- 
               <a class="works-item" href="works-template.html" target="b">
                 <div class="works-img">
                   <img src="img/works-dummy-thumb.jpg" alt="" />
@@ -193,7 +228,6 @@
                 <p class="works-name">作品名が入る</p>
                 <p class="works-info">Banner Design</p>
               </a> -->
-          
             </div>
           </div>
         </section>
@@ -201,17 +235,31 @@
 
         <!-- contact -->
         <section class="contact section" id="contact">
-        <div class="container">
-          <h2 class="title active">CONTACT</h2>
-          <p class="lead">
-            お問い合わせは、<br class="sp-only">Twitterでお伺いしております。
-          </p>
-          <div class="contact-list">
-            <h3 class="sns-title>">Twitter</h3>
-            <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/takamiya_code_?ref_src=twsrc%5Etfw">Tweets by takamiya_code_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="container">
+            <h2 class="title active">CONTACT</h2>
+            <p class="lead">
+              お問い合わせは、<br
+                class="sp-only"
+              />Twitterでお伺いしております。
+            </p>
+            <div class="contact-list">
+              <h3 class="sns-title>">Twitter</h3>
+              <a
+                class="twitter-timeline"
+                data-width="300"
+                data-height="400"
+                data-theme="light"
+                href="https://twitter.com/takamiya_code_?ref_src=twsrc%5Etfw"
+                >Tweets by takamiya_code_</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
         <!-- /contact -->
 
         <div class="page-top" id="js-page-top">
@@ -221,7 +269,12 @@
 
       <!-- footer -->
       <footer class="footer">
-        <div class="copyright">&copy;RYO TAKAMIYA</div>
+          <div class="copyright">&copy;RYO TAKAMIYA</div>
+          <div class="free_coding">
+            <a href="https://webdesigner-go.com/coding-practice/">
+              無料コーディング練習所
+            </a>
+          </div>
       </footer>
       <!-- /footer -->
     </div>
